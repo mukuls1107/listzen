@@ -20,10 +20,12 @@ function displayMainContent() {
     title.innerText = "List Zen"
 
     titleBox.append(title)
-    leftBox.append(titleBox)
+    createSearchBar()
+    leftBox.append(titleBox, createSearchBar())
 
     //createSearchBar
-    createSearchBar()
+
+
 
 
     mainBox.appendChild(leftBox);
