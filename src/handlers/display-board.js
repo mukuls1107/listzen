@@ -1,4 +1,6 @@
 import createSearchBar from "./searchBar";
+import addFlags from "./addFlags";
+
 
 function displayMainContent() {
     const mainBox = document.createElement("div");
@@ -21,7 +23,7 @@ function displayMainContent() {
 
     titleBox.append(title)
     createSearchBar()
-    leftBox.append(titleBox, createSearchBar())
+    leftBox.append(titleBox, createSearchBar(), addFlags())
 
     //createSearchBar
 
