@@ -25,8 +25,6 @@ function displayMainContent() {
     createSearchBar()
     leftBox.append(titleBox, createSearchBar(), addFlags())
 
-    //createSearchBar
-
 
 
 

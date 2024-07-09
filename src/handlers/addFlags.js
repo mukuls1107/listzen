@@ -19,38 +19,52 @@ function addFlags() {
     const mainBox = document.createElement("div");
     mainBox.setAttribute("id", "__flag-main")
     mainBox.append(box1, box2, box3, box4)
-
+    
     // terminal for box 1
+    const tBox = document.createElement("div")
+    tBox.setAttribute("class", "tBox")
     const terminal = document.createElement("i")
     const terminalTxt = document.createElement("span")
     terminalTxt.innerText = "My Day"
     terminal.setAttribute("class", "fa-solid fa-terminal")
     terminal.setAttribute("style", "color: #35868B")
-    box1.append(terminal ,terminalTxt)
+    tBox.append(terminal, terminalTxt)
+    box1.append(tBox)
+    // box1.append(terminal ,terminalTxt)
 
     // hourglass for box2
+    const hBox = document.createElement("div")
+    hBox.setAttribute("class", "tBox")
     const hourglass = document.createElement("i")
     const hgTxt = document.createElement("span")
     hgTxt.innerText = "Important"
     hourglass.className = "fa-solid fa-hourglass-start"
     hourglass.style.color = "#7C5213"
-    box2.append(hourglass, hgTxt)
+    hBox.append(hourglass,hgTxt)
+    box2.append(hBox)
+    // box2.append(hourglass, hgTxt)
 
     // box for box3
+    const cBox = document.createElement("div")
+    cBox.setAttribute("class", "tBox")
     const cupboard = document.createElement("i")
     const cpTxt = document.createElement("span");
     cpTxt.innerText = "Planned"
     cupboard.setAttribute("class", "fa-solid fa-box")
     cupboard.setAttribute("style", "color: #798530")
-    box3.append(cupboard, cpTxt);
+    cBox.append(cupboard, cpTxt);
+    box3.append(cBox)
 
     // Dummy
+    const dBox = document.createElement("div")
+    dBox.setAttribute("class", "tBox")
     const dummy = document.createElement("i")
     const dmTxt = document.createElement("span");
     dmTxt.innerText = "Personal"
     dummy.setAttribute("class", "fa-solid fa-user")
     dummy.setAttribute("style", "color: #000")
-    box4.append(dummy,dmTxt)
+    dBox.append(dummy, dmTxt)
+    box4.append(dBox)
 
 
 
