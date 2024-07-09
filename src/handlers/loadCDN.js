@@ -7,7 +7,7 @@ function loadCDN() {
     
         document.head.append(link);
 
-        console.log(`CDN Loaded!`)
+        console.log(`============= CDN Loaded! =============`)
     } catch (error) {
         console.error(error)
     }

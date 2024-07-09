@@ -7,10 +7,11 @@ function addFlags() {
     // const icon = 
 
     const boxArr = [box1, box2, box3, box4];
-
-    for (const box of boxArr) {
-        box.setAttribute("class", "__flag-box")
-
+    let i = 0;
+    for (i; i < boxArr.length; i++) {
+        
+        boxArr[i].setAttribute("class", "__flag-box")
+        boxArr[i].setAttribute("id", `box-${i}`)
     }
 
 
@@ -19,13 +20,14 @@ function addFlags() {
     const mainBox = document.createElement("div");
     mainBox.setAttribute("id", "__flag-main")
     mainBox.append(box1, box2, box3, box4)
-    
+
     // terminal for box 1
     const tBox = document.createElement("div")
     tBox.setAttribute("class", "tBox")
     const terminal = document.createElement("i")
     const terminalTxt = document.createElement("span")
     terminalTxt.innerText = "My Day"
+
     terminal.setAttribute("class", "fa-solid fa-terminal")
     terminal.setAttribute("style", "color: #35868B")
     tBox.append(terminal, terminalTxt)
@@ -40,7 +42,7 @@ function addFlags() {
     hgTxt.innerText = "Important"
     hourglass.className = "fa-solid fa-hourglass-start"
     hourglass.style.color = "#7C5213"
-    hBox.append(hourglass,hgTxt)
+    hBox.append(hourglass, hgTxt)
     box2.append(hBox)
     // box2.append(hourglass, hgTxt)
 
