@@ -26,17 +26,49 @@ function displayMainContent() {
     createSearchBar()
     leftBox.append(titleBox, createSearchBar(), addFlags())
 
+    // Left Box is finished
 
 
+    /**
+     * Starting Right Box now.
+     */
+
+
+    const mdTask = document.createElement("div")
+    const impTask = document.createElement("div")
+    const plTask = document.createElement("div")
+    const psTask = document.createElement("div")
+    const taskBox = document.createElement("div")
+    taskBox.setAttribute("class", "task-container")
+
+    mdTask.setAttribute("class", "__myday-box task-box")
+    impTask.setAttribute("class", "__imp-box task-box")
+    plTask.setAttribute("class", "__plan-box task-box")
+    psTask.setAttribute("class", "__personal-box task-box")
+
+
+    taskBox.append(mdTask, impTask, plTask, psTask)
+    rightBox.append(taskBox)
+
+
+
+
+
+    /**
+     * Don't touch below 
+     */
 
     mainBox.appendChild(leftBox);
     mainBox.appendChild(rightBox);
-    setTimeout(()=>{
+    setTimeout(() => {
 
         addTask.addTaskToMyday();
         addTask.addTaskToImportant();
         addTask.addTaskToPlanned();
         addTask.addTaskToPersonal();
+
+
+
     }, 1000)
 
     return mainBox;
