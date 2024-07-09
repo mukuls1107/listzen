@@ -41,10 +41,10 @@ function displayMainContent() {
     const taskBox = document.createElement("div")
     taskBox.setAttribute("class", "task-container")
 
-    mdTask.setAttribute("class", "__myday-box task-box")
-    impTask.setAttribute("class", "__imp-box task-box")
-    plTask.setAttribute("class", "__plan-box task-box")
-    psTask.setAttribute("class", "__personal-box task-box")
+    mdTask.setAttribute("class", "__myday-box")
+    impTask.setAttribute("class", "__imp-box")
+    plTask.setAttribute("class", "__plan-box")
+    psTask.setAttribute("class", "__personal-box")
 
 
     taskBox.append(mdTask, impTask, plTask, psTask)

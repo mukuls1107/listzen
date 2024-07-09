@@ -151,23 +151,38 @@ body {
 }
 
 .__myday-box {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #35868B;
+    color: white;
+
 }
 
 .__imp-box {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #7C5213;
+    color: white;
+
 }
 
 .__plan-box {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #798530;
+    color: white;
+
 }
 
 .__personal-box {
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #000000a0;
+    color: white;
 }
 
 .task-box {

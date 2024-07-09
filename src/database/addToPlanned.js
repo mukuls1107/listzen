@@ -1,18 +1,32 @@
-function Planned(){
+function Planned() {
     let taskList = [];
-    let task = prompt("Enter the task here: ");
-    taskList.push(task)
-    localStorage.setItem("planned", taskList);
-    const display = document.getElementsByClassName(".__plan-box");
-    const data = localStorage.getItem("planned")
-    // console.log(data)
-    if(data.length < 0){
-        console.log(`Data is empty.`)
-    }else{
-        console.log(`${data.toString()}`)
+    let task = prompt("Enter the task here (Cancel the task to view previous): ");
+    if (task) {
+        taskList.push(task);
+        localStorage.setItem("planned", JSON.stringify(taskList));
+    }
+
+    const display = document.querySelector(".__plan-box");
+    const data = localStorage.getItem("planned");
+
+    if (data) {
+        const tasks = JSON.parse(data);
+        display.classList.add("task-box");
+
+        // Clear previous tasks
+        display.innerHTML = '';
+
+        // Add tasks to the display
+        tasks.forEach(task => {
+            const taskElement = document.createElement("div");
+            taskElement.textContent = task;
+            display.appendChild(taskElement);
+        });
+
+        console.log(`${tasks.toString()}`);
+    } else {
+        console.log("Data is empty.");
     }
 }
-
-
 
 export default Planned;

@@ -5,39 +5,50 @@ import Myday from "../database/addItemMyDay";
 
 function addTaskToMyday() {
     const id = document.getElementById("box-0");
-    id.addEventListener("click", (e) => {
-        e.stopPropagation();
-        // alert(`${id.id} was clicked!`);
-        console.log(`Adding task in MY DAY!`)
-        Myday()
-    });
+    if (id) {
+        id.addEventListener("click", (e) => {
+            e.stopPropagation();
+            Myday();
+        });
+    } else {
+        console.error("Element with ID 'box-0' not found.");
+    }
 }
 
 function addTaskToImportant() {
     const id = document.getElementById("box-1");
-    id.addEventListener("click", (e) => {
-        e.stopPropagation();
-        console.log(`Adding task in IMPORTANT!`)
-        Important()
-    });
+    if (id) {
+        id.addEventListener("click", (e) => {
+            e.stopPropagation();
+            Important();
+        });
+    } else {
+        console.error("Element with ID 'box-1' not found.");
+    }
 }
 
 function addTaskToPlanned() {
     const id = document.getElementById("box-2");
-    id.addEventListener("click", (e) => {
-        e.stopPropagation();
-        console.log(`Adding task in PLANNED!`)
-        Planned()
-    });
+    if (id) {
+        id.addEventListener("click", (e) => {
+            e.stopPropagation();
+            Planned();
+        });
+    } else {
+        console.error("Element with ID 'box-2' not found.");
+    }
 }
 
 function addTaskToPersonal() {
     const id = document.getElementById("box-3");
-    id.addEventListener("click", (e) => {
-        e.stopPropagation();
-        console.log(`Adding task in PERSONAL!`)
-        Personal()
-    });
+    if (id) {
+        id.addEventListener("click", (e) => {
+            e.stopPropagation();
+            Personal();
+        });
+    } else {
+        console.error("Element with ID 'box-3' not found.");
+    }
 }
 
 export default { addTaskToImportant, addTaskToPersonal, addTaskToPlanned, addTaskToMyday };
