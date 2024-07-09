@@ -36,7 +36,7 @@ function addFlags() {
 
     // hourglass for box2
     const hBox = document.createElement("div")
-    hBox.setAttribute("class", "tBox")
+    hBox.setAttribute("class", "hBox")
     const hourglass = document.createElement("i")
     const hgTxt = document.createElement("span")
     hgTxt.innerText = "Important"
@@ -48,7 +48,7 @@ function addFlags() {
 
     // box for box3
     const cBox = document.createElement("div")
-    cBox.setAttribute("class", "tBox")
+    cBox.setAttribute("class", "cBox")
     const cupboard = document.createElement("i")
     const cpTxt = document.createElement("span");
     cpTxt.innerText = "Planned"
@@ -59,7 +59,7 @@ function addFlags() {
 
     // Dummy
     const dBox = document.createElement("div")
-    dBox.setAttribute("class", "tBox")
+    dBox.setAttribute("class", "dBox")
     const dummy = document.createElement("i")
     const dmTxt = document.createElement("span");
     dmTxt.innerText = "Personal"
@@ -70,7 +70,7 @@ function addFlags() {
 
 
 
-
+    
     return mainBox
 
 }

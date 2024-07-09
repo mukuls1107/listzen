@@ -73,7 +73,7 @@ body {
 .__search-box{
     height: 39px;
     width: 244px;
-    background-color: #E8E8E8;
+    background-color: #eaeaea;
     position: relative;
     top: 12px;
 }
@@ -118,7 +118,10 @@ body {
     cursor: pointer;
 }
 
-.tBox{
+.tBox ,
+.hBox ,
+.cBox ,
+.dBox{
     display: flex;
     justify-content: space-around;
     align-items: center;

@@ -1,5 +1,6 @@
 import createSearchBar from "./searchBar";
 import addFlags from "./addFlags";
+import addTask from "./add-task";
 
 
 function displayMainContent() {
@@ -30,6 +31,13 @@ function displayMainContent() {
 
     mainBox.appendChild(leftBox);
     mainBox.appendChild(rightBox);
+    setTimeout(()=>{
+
+        addTask.addTaskToMyday();
+        addTask.addTaskToImportant();
+        addTask.addTaskToPlanned();
+        addTask.addTaskToPersonal();
+    }, 1000)
 
     return mainBox;
 
